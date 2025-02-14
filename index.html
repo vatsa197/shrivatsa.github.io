@@ -5,72 +5,97 @@
   <meta name="description" content="Resume Website of Shrivatsa Gudi (AI/ML Professional)">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shrivatsa Gudi - AI/ML Professional</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
   <style>
     /* -------------------------
-       BASIC RESET & GLOBAL STYLES
+       BASIC RESET
     ---------------------------- */
-    * {
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* -------------------------
+       BASE STYLES
+    ---------------------------- */
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: #333;
-      background-color: #f4f4f4;
+      background-color: #f2f3f7;
       line-height: 1.6;
     }
 
     a {
       text-decoration: none;
-      color: #333;
+      color: inherit;
     }
 
-    a:hover {
-      color: #007acc;
-    }
-
+    /* Container for main content */
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 1rem;
-      background-color: #fff;
     }
 
     /* -------------------------
-       HEADER
+       HEADER / HERO
     ---------------------------- */
     header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      padding: 3rem 1rem;
       text-align: center;
-      padding: 1rem 0;
-      border-bottom: 2px solid #e3e3e3;
-      margin-bottom: 1rem;
+      position: relative;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.3rem;
       margin-bottom: 0.5rem;
-      color: #444;
+      font-weight: 600;
     }
     header p {
       font-size: 1rem;
-      color: #666;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
     }
 
     /* -------------------------
-       NAV
+       NAVIGATION
     ---------------------------- */
     nav {
-      text-align: center;
-      margin-bottom: 1rem;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
     nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       list-style: none;
-      display: inline-flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      padding: 0.75rem 0;
     }
     nav li {
       font-weight: 500;
+      color: #444;
+    }
+    nav a {
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #4e54c8; /* accent color on hover */
     }
 
     /* -------------------------
@@ -80,52 +105,48 @@
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
       color: #444;
-      border-bottom: 2px solid #e3e3e3;
       padding-bottom: 0.25rem;
-    }
-
-    section p {
-      margin: 0.5rem 0;
-      text-align: justify;
+      border-bottom: 2px solid #e3e3e3;
+      font-weight: 500;
     }
 
     /* -------------------------
-       INFO BLOCKS (lists, etc.)
+       INFO BLOCKS, CARDS
     ---------------------------- */
     .info-block {
       margin-bottom: 2rem;
     }
-    .info-block ul {
-      margin-left: 1.2rem;
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    /* For lists within each card */
+    .card ul {
       list-style: square;
+      margin-left: 1.2rem;
       margin-top: 0.5rem;
     }
-    .info-block li {
+    .card li {
       margin: 0.4rem 0;
     }
-    .info-block h3 {
-      font-size: 1.1rem;
+    .subheading {
+      font-weight: 600;
       margin: 0.5rem 0 0.25rem 0;
       color: #555;
     }
-    .info-block .subheading {
-      font-weight: bold;
-      margin: 0.3rem 0;
+    .muted {
+      font-size: 0.9rem;
+      color: #666;
     }
 
-    /* -------------------------
-       CONTACT SECTION
-    ---------------------------- */
-    #contact ul {
-      list-style: none;
-      margin-left: 0;
-    }
-    #contact li {
-      margin: 0.3rem 0;
-    }
-    #contact span {
-      font-weight: bold;
-      color: #333;
+    /* Special styling for multi-line blocks within cards */
+    .card p {
+      margin: 0.5rem 0;
+      text-align: justify;
+      line-height: 1.5;
     }
 
     /* -------------------------
@@ -133,21 +154,38 @@
     ---------------------------- */
     footer {
       text-align: center;
-      margin-top: 2rem;
-      padding: 1rem 0;
+      margin: 2rem 0 1rem 0;
       color: #666;
       font-size: 0.9rem;
     }
 
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- HERO SECTION -->
   <header>
     <h1>Shrivatsa Gudi</h1>
-    <p>Phone: +91 7676451990 | Email: <a href="mailto:shrivatsagudi@gmail.com">shrivatsagudi@gmail.com</a><br>
-    Vellore, Tamil Nadu, India</p>
+    <p>
+      Phone: +91 7676451990 |
+      <a href="mailto:shrivatsagudi@gmail.com" style="color: #fff; text-decoration: underline;">
+        shrivatsagudi@gmail.com
+      </a><br>
+      Vellore, Tamil Nadu, India
+    </p>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#summary">Summary</a></li>
@@ -161,138 +199,176 @@
     </ul>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <div class="container">
     <!-- SUMMARY SECTION -->
     <section id="summary" class="info-block">
       <h2>Summary</h2>
-      <p>
-        Highly motivated M.Tech (AIML) candidate with a strong foundation in AI/ML algorithms, deep learning frameworks, 
-        and software development. Experienced in developing scalable solutions for NLP, Speech Recognition, and 
-        Computer Vision. Demonstrated success in hackathons and research-based projects, with proven collaboration, 
-        leadership, and problem-solving abilities.
-      </p>
+      <div class="card">
+        <p>
+          Highly motivated M.Tech (AIML) candidate with a strong foundation in AI/ML algorithms, deep learning frameworks,
+          and software development. Experienced in developing scalable solutions for NLP, Speech Recognition, and
+          Computer Vision. Demonstrated success in hackathons and research-based projects, with proven collaboration,
+          leadership, and problem-solving abilities.
+        </p>
+      </div>
     </section>
 
     <!-- EDUCATION SECTION -->
     <section id="education" class="info-block">
       <h2>Education</h2>
-      <ul>
-        <li>
-          <div class="subheading">M.Tech in Computer Science &amp; Engineering (AIML) <span>(2024 – Present)</span></div>
-          <p>Vellore Institute of Technology (VIT), Vellore | CGPA: 8.12</p>
-        </li>
-        <li>
-          <div class="subheading">B.E. in Artificial Intelligence &amp; Machine Learning <span>(2020 – 2024)</span></div>
-          <p>Basaveshwar Engineering College, Bagalkote | CGPA: 7.59</p>
-        </li>
-      </ul>
+      <div class="card">
+        <div class="subheading">
+          M.Tech in Computer Science &amp; Engineering (AIML) (2024 – Present)
+        </div>
+        <p class="muted">Vellore Institute of Technology (VIT), Vellore | CGPA: 8.12</p>
+      </div>
+      <div class="card">
+        <div class="subheading">
+          B.E. in Artificial Intelligence &amp; Machine Learning (2020 – 2024)
+        </div>
+        <p class="muted">Basaveshwar Engineering College, Bagalkote | CGPA: 7.59</p>
+      </div>
     </section>
 
     <!-- SKILLS SECTION -->
     <section id="skills" class="info-block">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Python, C, C++, SQL</li>
-        <li><strong>Frameworks &amp; Libraries:</strong> TensorFlow, PyTorch, Keras, Scikit-learn, OpenCV</li>
-        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, PHP, Flask, Django</li>
-        <li><strong>Databases:</strong> MySQL, MongoDB</li>
-        <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Tableau, Power BI</li>
-        <li><strong>ML &amp; Data Analysis:</strong> Pandas, NumPy, Matplotlib</li>
-        <li><strong>Soft Skills:</strong> Adaptability, Collaboration, Problem-Solving, Communication</li>
-      </ul>
+      <div class="card">
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, C, C++, SQL</li>
+          <li><strong>Frameworks &amp; Libraries:</strong> TensorFlow, PyTorch, Keras, Scikit-learn, OpenCV</li>
+          <li><strong>Web Development:</strong> HTML, CSS, JavaScript, PHP, Flask, Django</li>
+          <li><strong>Databases:</strong> MySQL, MongoDB</li>
+          <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Tableau, Power BI</li>
+          <li><strong>ML &amp; Data Analysis:</strong> Pandas, NumPy, Matplotlib</li>
+          <li><strong>Soft Skills:</strong> Adaptability, Collaboration, Problem-Solving, Communication</li>
+        </ul>
+      </div>
     </section>
 
     <!-- EXPERIENCE SECTION -->
     <section id="experience" class="info-block">
       <h2>Experience</h2>
-      <h3>NLP Intern, Ionidea Interactive (Bengaluru) | Feb 2024 – Jul 2024</h3>
-      <ul>
-        <li>Enhanced NLP performance through advanced Contextual Entity Recognition using contextual embeddings, multimodal integration, and cross-domain adaptation techniques.</li>
-        <li>Leveraged knowledge graphs to improve accuracy and performance across multiple languages.</li>
-        <li>Designed scalable ML pipelines for text classification and named entity recognition tasks.</li>
-      </ul>
 
-      <h3>Project Intern, Vocab.AI (IIIT Dharwad) | Jul 2023 – Sep 2023</h3>
-      <ul>
-        <li>Developed deep learning architectures for Automatic Speech Recognition, reducing WER by 15% via advanced data preprocessing.</li>
-        <li>Contributed to a multilingual speech translation system using transformers and implemented evaluation metrics (BLEU, METEOR, TER).</li>
-        <li>Built automated workflows for model training, validation, and hyperparameter tuning, ensuring reproducibility and scalability.</li>
-      </ul>
+      <div class="card">
+        <div class="subheading">NLP Intern, Ionidea Interactive</div>
+        <p class="muted">Bengaluru | Feb 2024 – Jul 2024</p>
+        <ul>
+          <li>Enhanced NLP performance through advanced Contextual Entity Recognition using contextual embeddings, multimodal integration, and cross-domain adaptation.</li>
+          <li>Leveraged knowledge graphs to improve accuracy and performance across multiple languages.</li>
+          <li>Designed scalable ML pipelines for text classification and named entity recognition tasks.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Project Intern, Vocab.AI (IIIT Dharwad)</div>
+        <p class="muted">Jul 2023 – Sep 2023</p>
+        <ul>
+          <li>Developed deep learning architectures for Automatic Speech Recognition, reducing WER by 15% via advanced data preprocessing.</li>
+          <li>Contributed to a multilingual speech translation system using transformers and implemented evaluation metrics (BLEU, METEOR, TER).</li>
+          <li>Built automated workflows for model training, validation, and hyperparameter tuning, ensuring reproducibility and scalability.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- KEY PROJECTS SECTION -->
     <section id="projects" class="info-block">
       <h2>Key Projects</h2>
-      <ul>
-        <li>
-          <div class="subheading">Quantum Deep Learning for Autism Detection (Ongoing)</div>
-          Designing a hybrid quantum-classical neural network for early detection of autism from clinical data using 
-          variational quantum circuits and quantum optimization. Collaborating with clinicians to validate diagnostic 
+
+      <div class="card">
+        <div class="subheading">Quantum Deep Learning for Autism Detection (Ongoing)</div>
+        <p>
+          Designing a hybrid quantum-classical neural network for early detection of autism from clinical data using
+          variational quantum circuits and quantum optimization. Collaborating with clinicians to validate diagnostic
           accuracy for early intervention.
-        </li>
-        <li>
-          <div class="subheading">Face Recognition Bot (Academic Mini Project)</div>
-          Implemented a real-time face recognition system using Python, OpenCV, and ML algorithms. Optimized detection 
-          for high accuracy under varied conditions.
-        </li>
-        <li>
-          <div class="subheading">Web-Based Hostel Management System</div>
-          Developed a PHP-MySQL platform for managing hostel operations (room allocation, fee management, student records), 
-          with secure user authentication and efficient queries.
-        </li>
-        <li>
-          <div class="subheading">Placement Prediction Model using ML</div>
-          Created a Scikit-learn model to predict student placement probabilities. Compared multiple algorithms (Logistic 
-          Regression, Random Forest) for optimal accuracy.
-        </li>
-        <li>
-          <div class="subheading">Crop Prediction Model using ML</div>
-          Utilized ensemble techniques (Random Forest, Gradient Boosting) to recommend ideal crops based on environmental 
-          factors. Improved outcomes in precision agriculture.
-        </li>
-        <li>
-          <div class="subheading">Fruit/Vegetable Quality Index Classification (Hackathon Project)</div>
-          Built a CNN with TensorFlow to classify product quality; integrated data augmentation to maintain high robustness 
-          and accuracy.
-        </li>
-      </ul>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Face Recognition Bot (Academic Mini Project)</div>
+        <p>
+          Implemented a real-time face recognition system using Python, OpenCV, and ML algorithms. Optimized detection
+          parameters to maintain high accuracy under varied conditions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Web-Based Hostel Management System</div>
+        <p>
+          Developed a PHP-MySQL platform for managing hostel operations (room allocation, fee management, student records),
+          ensuring secure user authentication and efficient database queries.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Placement Prediction Model using ML</div>
+        <p>
+          Created a Scikit-learn model to predict student placement probabilities based on academic and extracurricular
+          data. Compared multiple algorithms (Logistic Regression, Random Forest) to optimize accuracy.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Crop Prediction Model using ML</div>
+        <p>
+          Utilized ensemble techniques (Random Forest, Gradient Boosting) to recommend ideal crops based on environmental
+          factors, improving precision agriculture outcomes through robust feature engineering.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="subheading">Fruit/Vegetable Quality Index Classification (Hackathon Project)</div>
+        <p>
+          Built a CNN in TensorFlow to classify product quality, incorporating data augmentation for robustness. Automated
+          the sorting process based on quality index predictions.
+        </p>
+      </div>
     </section>
 
     <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements" class="info-block">
       <h2>Achievements</h2>
-      <ul>
-        <li>HCL Hack IITK Evangelist</li>
-        <li>2nd Place in a 12-hour College-Level Hackathon (BEC-CSE)</li>
-        <li>1st &amp; 3rd Place in Sub-section and Section-Level Hackathons – IEEE Bangalore Section (Codxpress)</li>
-        <li>Conducted AI/ML workshops for 200+ participants under IEEE initiatives</li>
-        <li>Recognized as "Outstanding Student Volunteer" by IEEE Bangalore Section</li>
-      </ul>
+      <div class="card">
+        <ul>
+          <li>HCL Hack IITK Evangelist</li>
+          <li>2nd Place in a 12-hour College-Level Hackathon (BEC-CSE)</li>
+          <li>1st &amp; 3rd Place in Sub-section and Section-Level Hackathons – IEEE Bangalore Section (Codxpress)</li>
+          <li>Conducted AI/ML workshops for 200+ participants under IEEE initiatives</li>
+          <li>Recognized as "Outstanding Student Volunteer" by IEEE Bangalore Section</li>
+        </ul>
+      </div>
     </section>
 
     <!-- LEADERSHIP & VOLUNTEERING SECTION -->
     <section id="leadership" class="info-block">
       <h2>Leadership &amp; Volunteering</h2>
-      <ul>
-        <li>Webmaster, BEC-IEEE SB (<a href="https://becieee.org" target="_blank" rel="noopener">becieee.org</a>) – Maintained site performance, security, and content updates in coordination with key stakeholders.</li>
-        <li>Active engagement in IEEE Bangalore Section initiatives, focusing on team building, strategic planning, and volunteer coordination.</li>
-      </ul>
+      <div class="card">
+        <ul>
+          <li>Webmaster, BEC-IEEE SB (<a href="https://becieee.org" target="_blank" rel="noopener">becieee.org</a>) – Maintained site performance, security, and content updates in collaboration with key stakeholders.</li>
+          <li>Active engagement in IEEE Bangalore Section initiatives, focusing on team building, strategic planning, and volunteer coordination.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="info-block">
       <h2>Contact</h2>
-      <ul>
-        <li><span>Email:</span> <a href="mailto:shrivatsagudi@gmail.com">shrivatsagudi@gmail.com</a></li>
-        <li><span>Phone:</span> +91 7676451990</li>
-        <li><span>Location:</span> Vellore, Tamil Nadu, India</li>
-        <li><span>Languages:</span> English (Fluent), Kannada (Fluent), Hindi (Proficient)</li>
-      </ul>
+      <div class="card">
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:shrivatsagudi@gmail.com">shrivatsagudi@gmail.com</a></li>
+          <li><strong>Phone:</strong> +91 7676451990</li>
+          <li><strong>Location:</strong> Vellore, Tamil Nadu, India</li>
+          <li><strong>Languages:</strong> English (Fluent), Kannada (Fluent), Hindi (Proficient)</li>
+        </ul>
+      </div>
     </section>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Shrivatsa Gudi. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
