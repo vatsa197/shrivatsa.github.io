@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Resume Website of Shrivatsa Vaman Gudi" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shrivatsa Vaman Gudi - AI/ML Student</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Resume Website of Shrivatsa Gudi (AI/ML Professional)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrivatsa Gudi - AI/ML Professional</title>
   <style>
     /* -------------------------
        BASIC RESET & GLOBAL STYLES
@@ -18,7 +18,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
-      background-color: #f2f2f2;
+      background-color: #f4f4f4;
       line-height: 1.6;
     }
 
@@ -31,7 +31,6 @@
       color: #007acc;
     }
 
-    /* Container for main content */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -43,25 +42,23 @@
        HEADER
     ---------------------------- */
     header {
-      background-color: #fff;
-      padding: 1rem 0;
-      margin-bottom: 1rem;
       text-align: center;
+      padding: 1rem 0;
       border-bottom: 2px solid #e3e3e3;
+      margin-bottom: 1rem;
     }
     header h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
       color: #444;
     }
-    header h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
+    header p {
+      font-size: 1rem;
       color: #666;
     }
 
     /* -------------------------
-       NAVIGATION (anchor links)
+       NAV
     ---------------------------- */
     nav {
       text-align: center;
@@ -87,19 +84,13 @@
       padding-bottom: 0.25rem;
     }
 
-    /* -------------------------
-       ABOUT SECTION
-    ---------------------------- */
-    .about {
-      margin-bottom: 2rem;
-    }
-    .about p {
+    section p {
       margin: 0.5rem 0;
       text-align: justify;
     }
 
     /* -------------------------
-       INFO BLOCKS (Skills, Education, etc.)
+       INFO BLOCKS (lists, etc.)
     ---------------------------- */
     .info-block {
       margin-bottom: 2rem;
@@ -107,23 +98,34 @@
     .info-block ul {
       margin-left: 1.2rem;
       list-style: square;
+      margin-top: 0.5rem;
     }
     .info-block li {
+      margin: 0.4rem 0;
+    }
+    .info-block h3 {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 0.25rem 0;
+      color: #555;
+    }
+    .info-block .subheading {
+      font-weight: bold;
       margin: 0.3rem 0;
     }
 
     /* -------------------------
        CONTACT SECTION
     ---------------------------- */
-    .contact-list {
+    #contact ul {
       list-style: none;
       margin-left: 0;
     }
-    .contact-list li {
-      margin: 0.4rem 0;
+    #contact li {
+      margin: 0.3rem 0;
     }
-    .contact-list span {
+    #contact span {
       font-weight: bold;
+      color: #333;
     }
 
     /* -------------------------
@@ -136,126 +138,161 @@
       color: #666;
       font-size: 0.9rem;
     }
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Shrivatsa Vaman Gudi</h1>
-    <h2>Student | Artificial Intelligence &amp; Machine Learning</h2>
+    <h1>Shrivatsa Gudi</h1>
+    <p>Phone: +91 7676451990 | Email: <a href="mailto:shrivatsagudi@gmail.com">shrivatsagudi@gmail.com</a><br>
+    Vellore, Tamil Nadu, India</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#summary">Summary</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#internship">Internships</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Key Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#leadership">Leadership</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <div class="container">
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
+    <!-- SUMMARY SECTION -->
+    <section id="summary" class="info-block">
+      <h2>Summary</h2>
       <p>
-        A motivated and forward-thinking Engineering student specializing in
-        Artificial Intelligence and Machine Learning, with a proven track record
-        of leadership in technology projects. Demonstrates strong analytical skills
-        and a deep commitment to advancing technological innovation. Excels in
-        team settings and possesses excellent communication abilities. Passionate
-        about leveraging academic and project experiences to impact the tech
-        industry positively.
+        Highly motivated M.Tech (AIML) candidate with a strong foundation in AI/ML algorithms, deep learning frameworks, 
+        and software development. Experienced in developing scalable solutions for NLP, Speech Recognition, and 
+        Computer Vision. Demonstrated success in hackathons and research-based projects, with proven collaboration, 
+        leadership, and problem-solving abilities.
       </p>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="info-block">
-      <h2>Skills &amp; Expertise</h2>
-      <ul>
-        <li>Programming Languages: Python, C, C++</li>
-        <li>OOP: Object-Oriented Programming</li>
-        <li>Databases: RDBMS, SQL</li>
-        <li>Leadership: Strategic Planning, Execution, Team Building</li>
-        <li>Communication: Effective Communicator, Public Speaker</li>
-        <li>Tools: Microsoft Office, Git, GitHub, Social Media Content Creation</li>
-      </ul>
     </section>
 
     <!-- EDUCATION SECTION -->
     <section id="education" class="info-block">
       <h2>Education</h2>
       <ul>
-        <li><strong>2024 - Current</strong> <br>
-          M.Tech CSE (AIML) – VIT, Vellore
+        <li>
+          <div class="subheading">M.Tech in Computer Science &amp; Engineering (AIML) <span>(2024 – Present)</span></div>
+          <p>Vellore Institute of Technology (VIT), Vellore | CGPA: 8.12</p>
         </li>
-        <li><strong>2020 - 2024</strong> <br>
-          B.E in Artificial Intelligence &amp; Machine Learning – Basaveshwar Engineering College, Bagalkote <br>
-          CGPA: 7.59
-        </li>
-        <li><strong>2018 - 2020</strong> <br>
-          Pre-University – Sadhana PU College
+        <li>
+          <div class="subheading">B.E. in Artificial Intelligence &amp; Machine Learning <span>(2020 – 2024)</span></div>
+          <p>Basaveshwar Engineering College, Bagalkote | CGPA: 7.59</p>
         </li>
       </ul>
-      <p><strong>Languages:</strong> English, Kannada, Hindi</p>
-      <p><strong>Domain-Specific Courses Studied:</strong> Machine Learning, Principles of AI, DBMS, Data Science, HTML &amp; CSS, SQL, PHP &amp; JavaScript, Natural Language Processing, Deep Learning, Cyber Security, Optimization Techniques for ML, Big Data Analytics, Robotics Automation Processing</p>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="info-block">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, C, C++, SQL</li>
+        <li><strong>Frameworks &amp; Libraries:</strong> TensorFlow, PyTorch, Keras, Scikit-learn, OpenCV</li>
+        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, PHP, Flask, Django</li>
+        <li><strong>Databases:</strong> MySQL, MongoDB</li>
+        <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Tableau, Power BI</li>
+        <li><strong>ML &amp; Data Analysis:</strong> Pandas, NumPy, Matplotlib</li>
+        <li><strong>Soft Skills:</strong> Adaptability, Collaboration, Problem-Solving, Communication</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="info-block">
+      <h2>Experience</h2>
+      <h3>NLP Intern, Ionidea Interactive (Bengaluru) | Feb 2024 – Jul 2024</h3>
+      <ul>
+        <li>Enhanced NLP performance through advanced Contextual Entity Recognition using contextual embeddings, multimodal integration, and cross-domain adaptation techniques.</li>
+        <li>Leveraged knowledge graphs to improve accuracy and performance across multiple languages.</li>
+        <li>Designed scalable ML pipelines for text classification and named entity recognition tasks.</li>
+      </ul>
+
+      <h3>Project Intern, Vocab.AI (IIIT Dharwad) | Jul 2023 – Sep 2023</h3>
+      <ul>
+        <li>Developed deep learning architectures for Automatic Speech Recognition, reducing WER by 15% via advanced data preprocessing.</li>
+        <li>Contributed to a multilingual speech translation system using transformers and implemented evaluation metrics (BLEU, METEOR, TER).</li>
+        <li>Built automated workflows for model training, validation, and hyperparameter tuning, ensuring reproducibility and scalability.</li>
+      </ul>
+    </section>
+
+    <!-- KEY PROJECTS SECTION -->
     <section id="projects" class="info-block">
-      <h2>Projects Accomplished</h2>
+      <h2>Key Projects</h2>
       <ul>
-        <li>Face-recognition Bot (Academic Mini Project)</li>
-        <li>Web-based Hostel Management System</li>
-        <li>Web-based Superstore Management System</li>
-        <li>Placement Prediction Model using ML</li>
-        <li>Crop Prediction Model using ML</li>
-        <li>Fruit/Vegetable Quality Index Classification using Deep Learning</li>
-        <li>Currently managing BEC-IEEE SB website (<a href="https://becieee.org" target="_blank" rel="noopener">becieee.org</a>)</li>
-      </ul>
-      <p><strong>Accomplishments &amp; Certifications:</strong></p>
-      <ul>
-        <li>Learning Data Analytics (LinkedIn Learning)</li>
-        <li>Learning Python (LinkedIn Learning)</li>
-        <li>7-day International Workshop on AI (AiCHEF)</li>
-        <li>Winner of "Inquisition" (BEC-IEEE)</li>
-        <li>Evangelist at HCL HACK IITK</li>
-        <li>2nd Place in a 12-hour college-level hackathon (BEC-CSE)</li>
-        <li>Sub-section level 1st &amp; 3rd Place in 2-day Section-Level (National) hackathon "Codxpress" by IEEE Bangalore Section</li>
+        <li>
+          <div class="subheading">Quantum Deep Learning for Autism Detection (Ongoing)</div>
+          Designing a hybrid quantum-classical neural network for early detection of autism from clinical data using 
+          variational quantum circuits and quantum optimization. Collaborating with clinicians to validate diagnostic 
+          accuracy for early intervention.
+        </li>
+        <li>
+          <div class="subheading">Face Recognition Bot (Academic Mini Project)</div>
+          Implemented a real-time face recognition system using Python, OpenCV, and ML algorithms. Optimized detection 
+          for high accuracy under varied conditions.
+        </li>
+        <li>
+          <div class="subheading">Web-Based Hostel Management System</div>
+          Developed a PHP-MySQL platform for managing hostel operations (room allocation, fee management, student records), 
+          with secure user authentication and efficient queries.
+        </li>
+        <li>
+          <div class="subheading">Placement Prediction Model using ML</div>
+          Created a Scikit-learn model to predict student placement probabilities. Compared multiple algorithms (Logistic 
+          Regression, Random Forest) for optimal accuracy.
+        </li>
+        <li>
+          <div class="subheading">Crop Prediction Model using ML</div>
+          Utilized ensemble techniques (Random Forest, Gradient Boosting) to recommend ideal crops based on environmental 
+          factors. Improved outcomes in precision agriculture.
+        </li>
+        <li>
+          <div class="subheading">Fruit/Vegetable Quality Index Classification (Hackathon Project)</div>
+          Built a CNN with TensorFlow to classify product quality; integrated data augmentation to maintain high robustness 
+          and accuracy.
+        </li>
       </ul>
     </section>
 
-    <!-- INTERNSHIP SECTION -->
-    <section id="internship" class="info-block">
-      <h2>Internship Experience</h2>
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="info-block">
+      <h2>Achievements</h2>
       <ul>
-        <li><strong>Project Intern, Ionidea Interactive, Bengaluru (Feb 2024 - Jul 2024)</strong>
-          <br />Enhancing NLP performance through advanced contextual entity recognition, using techniques
-          such as contextual embeddings, multimodal integration, and cross-domain adaptation. Incorporating
-          knowledge graphs to refine accuracy and performance in diverse applications and languages.
-        </li>
-        <li><strong>Project Intern, Vocab.AI, IIIT Dharwad (Jul 2023 - Sept 2023)</strong>
-          <br />Developed deep learning architectures for ASR systems, achieving a 15% reduction in WER through
-          advanced data preprocessing techniques. Collaborated on a multilingual speech translation system using
-          transformers and implemented evaluation frameworks with BLEU, METEOR, and TER scores.
-        </li>
+        <li>HCL Hack IITK Evangelist</li>
+        <li>2nd Place in a 12-hour College-Level Hackathon (BEC-CSE)</li>
+        <li>1st &amp; 3rd Place in Sub-section and Section-Level Hackathons – IEEE Bangalore Section (Codxpress)</li>
+        <li>Conducted AI/ML workshops for 200+ participants under IEEE initiatives</li>
+        <li>Recognized as "Outstanding Student Volunteer" by IEEE Bangalore Section</li>
+      </ul>
+    </section>
+
+    <!-- LEADERSHIP & VOLUNTEERING SECTION -->
+    <section id="leadership" class="info-block">
+      <h2>Leadership &amp; Volunteering</h2>
+      <ul>
+        <li>Webmaster, BEC-IEEE SB (<a href="https://becieee.org" target="_blank" rel="noopener">becieee.org</a>) – Maintained site performance, security, and content updates in coordination with key stakeholders.</li>
+        <li>Active engagement in IEEE Bangalore Section initiatives, focusing on team building, strategic planning, and volunteer coordination.</li>
       </ul>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="info-block">
       <h2>Contact</h2>
-      <ul class="contact-list">
+      <ul>
         <li><span>Email:</span> <a href="mailto:shrivatsagudi@gmail.com">shrivatsagudi@gmail.com</a></li>
         <li><span>Phone:</span> +91 7676451990</li>
-        <li><span>Address:</span> VIT, Vellore - 632014</li>
+        <li><span>Location:</span> Vellore, Tamil Nadu, India</li>
+        <li><span>Languages:</span> English (Fluent), Kannada (Fluent), Hindi (Proficient)</li>
       </ul>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Shrivatsa Vaman Gudi. All rights reserved.</p>
+    <p>&copy; 2025 Shrivatsa Gudi. All rights reserved.</p>
   </footer>
 </body>
 </html>
